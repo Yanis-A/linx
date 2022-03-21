@@ -67,10 +67,6 @@ function logout() {
 // APP
 // --------------------------------------------
 
-// Définition de l'identité de l'utilisateur connecté
-let userLogged = $('#identifier').val();
-let showLogged = `<div class="white-text">Connected as ${userLogged}</div>`
-
 // Initialisation des gestionnaires d'événement
 $('#formLinks').on('submit', onAddLink);
 $('#cards').on('click', '[data-doc-id]', onDeleteLink);

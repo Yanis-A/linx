@@ -1,5 +1,5 @@
 # linx
-### A link managment tool
+### A link management tool
 
 + You can add links with a title and a description
 + You can delete the links you've created

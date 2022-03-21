@@ -25,7 +25,6 @@ function onPageLoad() {
         if (user !== null) { //On vérifie qu'une session est déja en cours
             $('#logged-in').show();
             console.log(user.email + ' is already logged in.');
-            $('#whoLogged').append(showLogged);
         }
         else {
             $('#logged-out').show();
@@ -44,7 +43,6 @@ function emailPasswordLogin(event) {
         .then(result => {
             $('#logged-out').hide();
             $('#logged-in').show();
-            $('#whoLogged').append(showLogged);
             $('.error').hide();
 
         })

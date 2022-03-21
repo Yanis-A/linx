@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linx</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico?v=2" type="image/x-icon">
+
+        <!-- JQuery -->
+        <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js" defer></script>
+
+        <!-- Materialize -->
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- SDK Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js" defer></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js" defer></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js" defer></script>
+
+        <script src="./js/index.js" type="module" defer></script>
+
+        <link rel="stylesheet" href="./styles/index.css" type="text/css">
+</head>
+<body>
+    <div id="logged-out">
+        <nav>
+            <div class="nav-wrapper light-blue">
+                <a href="#" class="brand-logo center">Linx<img src="./assets/favicon.png" alt="link" width="24px"></a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col s6 m4 l4 offset-s3 offset-m4 offset-l4">
+                    <div class="row">
+                        <h5 class="center-align">Login</h5>
+                    </div>
+                    <form class="connect" id="loginForm">
+                    <div class="row">
+                        <div class="input-field col s12 center-align">
+                            <input id="identifier" type="text" class="validate" required>
+                            <label for="identifier">ID</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 center-align">
+                            <input id="password" type="password" class="validate" required>
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row submission">
+                        <button type="submit" class="waves-effect waves-light btn blue lighten-1">Connection</button>
+                    </div>
+                    <div class="error"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="logged-in">
+        <nav>
+            <div class="nav-wrapper light-blue">
+                <a href="#" class="brand-logo left">Linx<img src="./assets/favicon.png" alt="link" width="24px"></a>
+                <ul id="nav-mobile" class="right">
+                    <li>
+                        <div id="whoLogged"></div>
+                    </li>
+                    <li>
+                        <a id="logout" title="Disconnect" class="red lighten-1 waves-effect waves-light btn">
+                            <i class="material-icons">logout</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="error"></div>
+        <div class="container">
+            <div>
+                <!-- Modal-->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <form id="formLinks">
+                            <h4>Add a link</h4>
+                            Title :
+                            <input type="text" id="linkTitle" required><br>
+                            URL :
+                            <input type="url" id="linkUrl" required><br>
+                            Description :
+                            <textarea id="linkDesc" class="materialize-textarea" required></textarea>
+                            <button type="submit" class="waves-effect waves-light btn light-blue">Add</button>
+                        </form>
+                    </div>
+                </div>    
+            </div>
+            <div class="row" id="cards">
+                <!-- Link cards goes here. -->
+            </div>
+        <div class="fixed-action-btn">
+            <a id="addBtn" class="btn-floating btn-large waves-effect waves-light light-blue modal-trigger" href="#modal1"><i class="material-icons">add</i></a>
+        </div>
+        <div class="loader-wrapper">
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
+    </div>
+</body>
+</html>

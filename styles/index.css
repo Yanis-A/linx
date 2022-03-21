@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@700&display=swap');
+
+html{
+    scrollbar-color:rgb(219, 219, 219) #fff;
+    scrollbar-width: thin;
+}
+
+.brand-logo{
+    font-family: 'Oxanium', cursive;
+    font-weight: 700;
+    padding-left: 40px !important;
+}
+
+.submission{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    max-height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color:rgb(219, 219, 219) #E3F2FD;
+}
+
+.card-link{
+    margin: 2vh 0 2vh 0;
+    transition: all 500ms ease-in-out;
+}
+
+card-link a:visited{
+    color: #fff !important;
+}
+
+#logged-in{
+    display: none;
+}
+
+#logged-out{
+    display: none;
+}
